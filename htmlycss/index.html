@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bienvenida</title>
+  <!-- Agrega el enlace al archivo CSS de Tailwind -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Agrega el enlace a la fuente personalizada -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap" rel="stylesheet">
+  <!-- Agrega una regla de estilo personalizada para la fuente -->
+  <style>
+    body {
+      font-family: 'Playpen Sans', sans-serif;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .container {
+        scroll-snap-type: y mandatory;
+        overflow-y: scroll;
+        height: 100vh;
+    }
+
+    section {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        scroll-snap-align: start;
+    }
+
+
+
+  </style>
+</head>
+<body class="flex items-center justify-center h-screen bg-gray-800 text-white relative overflow-hidden">
+    <div class="container">
+        <section class="one">
+            <!-- Video en bucle con fondo semi-opaco -->
+            <video autoplay loop muted playsinline class="fixed inset-0 w-full h-full opacity-50 object-cover object-center">
+                <source src="main_video.MP4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+                <!-- Utiliza las clases de Tailwind para el tamaño del texto y el margen superior e inferior -->
+                <h1 class="text-4xl lg:text-6xl font-bold mb-4  inset-0">
+                HOLA LISTITA 🥰
+                </h1>
+                <h2 class="text-2xl lg:text-3xl mt-2  inset-0">
+                Bienvenida a lo nuestro, espero que te guste
+                </h2>
+        </section>
+        <section class="two">
+            <!-- Video en bucle con fondo semi-opaco -->
+            <h1>HOLA</h1>
+        </section>
+    </div>
+</body>
+</html>
