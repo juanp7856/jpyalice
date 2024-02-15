@@ -12,11 +12,28 @@
   <link rel="icon" href="icono.JPG">
   <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap" rel="stylesheet">
   <!-- Agrega una regla de estilo personalizada para la fuente -->
+  <script src="script.js" defer></script>
   <style>
     body {
       font-family: 'Playpen Sans', sans-serif;
-      background-color: #F6EAFE;
+      /* background-color: #F6EAFE; */
     }
+    #texto-oculto {
+        /* display: none; */
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        /* font-size: 5em; */
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
+    
+    #texto-oculto.fade-in {
+        opacity: 1; /* Cambiado a 1 cuando tiene la clase fade-in */
+    }
+
   </style>
 </head>
 <body>
@@ -55,15 +72,37 @@
                 </div>
             </section>
             <section class="h-screen w-screen text-center relative overflow-hidden snap-start">
-                <div class="grid grid-cols-2 gap-4 mt-20 lg:my-16 flex justify-center items-center text-center">
+                <div class="grid grid-cols-2 gap-4 mt-20 lg:my-16 flex justify-center items-center text-center lg:mb-0">
                     <div class="flex items-center justify-center w-full col-span-2 lg:col-span-1">
                         <img src="primera.PNG" class="w-96 h-auto rounded-md shadow-2xl"/>
                     </div>
                     <h1 class="text-1m lg:text-3xl col-span-2 lg:col-span-1">Todo comenzó con un mensaje tranqui, por privado obviamente porque no quería pasar ningún bañazo</h1>
                     <h1 class="text-1m lg:text-3xl col-span-2 lg:col-span-1">Y mira que tan lejos ha llegado... definitivamente existe el efecto mariposa</h1>
                     <div class="flex items-center justify-center w-full col-span-2 lg:col-span-1">
-                        <img src="segunda.JPG" class="w-96 h-auto rounded-md shadow-2xl"/>
+                        <img src="segunda.JPG" class="w-96 h-96 lg:h-auto rounded-md shadow-2xl object-cover"/>
                     </div>
+                </div>
+            </section>
+            <section class="h-screen w-screen text-center relative overflow-hidden snap-start bg-black">
+                <div class="lg:grid lg:grid-cols-3 grid grid-rows-3 h-screen w-screen z-10 absolute" id="image-container">
+                    <div class="lg:h-screen lg:col-span-1 row-span-1">
+                        <img class="h-full w-full object-cover" src="tercera1.jpg" alt="Imagen 1" id="img1">
+                    </div>
+                    <div class="lg:h-screen lg:col-span-1 row-span-1">
+                        <img class="h-full w-full object-cover" src="tercera2.jpg" alt="Imagen 2" id="img2">
+                    </div>
+                    <div class="lg:h-screen lg:col-span-1 row-span-1">
+                        <img class="h-full w-full object-cover" src="tercera3.JPG" alt="Imagen 3" id="img3">
+                    </div>
+                </div>
+                <div id="texto-oculto" class="z-30">
+                    <h1 class="text-3xl lg:text-6xl font-bold lg:px-40 px-16">DEFINITIVAMENTE MIS VIAJES SON MEJORES CONTIGO Y LO SABES</h1>
+                </div>
+            </section>
+            <section class="h-screen w-screen text-center relative overflow-hidden snap-start">
+                <div class="grid grid-rows-3 justify-center">
+                    <img src="playa.jpg" alt="playa" class="row-span-2 mt-20"/>
+                    <h1 class="row-span-1 mt-20">Estos podriamos ser tu y yo proximamente en Guanacaste pero yo soy mas prieto</h1>
                 </div>
             </section>
     </main>
