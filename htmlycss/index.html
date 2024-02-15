@@ -3,63 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bienvenida</title>
+  <title>Juanpi y Alice</title>
   <!-- Agrega el enlace al archivo CSS de Tailwind -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <!-- Agrega el enlace a la fuente personalizada -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="icono.JPG">
   <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap" rel="stylesheet">
   <!-- Agrega una regla de estilo personalizada para la fuente -->
   <style>
     body {
       font-family: 'Playpen Sans', sans-serif;
+      background-color: #F6EAFE;
     }
-
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    .container {
-        scroll-snap-type: y mandatory;
-        overflow-y: scroll;
-        height: 100vh;
-    }
-
-    section {
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        scroll-snap-align: start;
-    }
-
-
-
   </style>
 </head>
-<body class="flex items-center justify-center h-screen bg-gray-800 text-white relative overflow-hidden">
-    <div class="container">
-        <section class="one">
-            <!-- Video en bucle con fondo semi-opaco -->
-            <video autoplay loop muted playsinline class="fixed inset-0 w-full h-full opacity-50 object-cover object-center">
-                <source src="main_video.MP4" type="video/mp4">
-                Tu navegador no soporta el elemento de video.
-            </video>
-                <!-- Utiliza las clases de Tailwind para el tamaño del texto y el margen superior e inferior -->
-                <h1 class="text-4xl lg:text-6xl font-bold mb-4  inset-0">
-                HOLA LISTITA 🥰
-                </h1>
-                <h2 class="text-2xl lg:text-3xl mt-2  inset-0">
-                Bienvenida a lo nuestro, espero que te guste
-                </h2>
-        </section>
-        <section class="two">
-            <!-- Video en bucle con fondo semi-opaco -->
-            <h1>HOLA</h1>
-        </section>
-    </div>
+<body>
+    <main class="snap-y snap-mandatory relative w-full h-screen overflow-auto">
+            <section class="h-screen w-screen text-center relative overflow-hidden snap-start">
+                <div class="z-30 relative flex flex-col h-full">
+                    <header>
+                        <h1 class="text-4xl lg:text-6xl font-bold mb-4 text-white pt-40">
+                            HOLA LISTITA 🥰
+                        </h1>
+                        <h2 class="text-2xl lg:text-3xl mt-2 text-white pt-5">
+                            Bienvenida a lo nuestro, espero que te guste
+                        </h2>
+                    </header>
+
+                    <footer class="pb-14 flex flex-col flex-grow justify-end items-center">
+                        <h2 class="text-2xl text-white">
+                            Sigue bajando
+                        </h2>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#FFFFFF" height="80px" width="80px" version="1.1" id="Layer_1" viewBox="0 0 511.787 511.787" xml:space="preserve">
+                            <g>
+                                <g>
+                                    <path d="M508.667,125.707c-4.16-4.16-10.88-4.16-15.04,0L255.76,363.573L18,125.707c-4.267-4.053-10.987-3.947-15.04,0.213    c-3.947,4.16-3.947,10.667,0,14.827L248.293,386.08c4.16,4.16,10.88,4.16,15.04,0l245.333-245.333    C512.827,136.693,512.827,129.867,508.667,125.707z"/>
+                                </g>
+                            </g>
+                            </svg>       
+                    </footer>
+                    
+                </div>
+
+                <div class="absolute top-0 left-0 right-0 bottom-0 h-full z-10 bg-black bg-opacity-[50]">
+                    <video class="w-full h-full object-cover opacity-50" autoplay loop muted playsinline>
+                        <source src="main_video.MP4" type="video/mp4">
+                        Tu navegador no soporta el elemento de video.
+                    </video>
+                </div>
+            </section>
+            <section class="h-screen w-screen text-center relative overflow-hidden snap-start">
+                <div class="grid grid-cols-2 gap-4 mt-20 lg:my-16 flex justify-center items-center text-center">
+                    <div class="flex items-center justify-center w-full col-span-2 lg:col-span-1">
+                        <img src="primera.PNG" class="w-96 h-auto rounded-md shadow-2xl"/>
+                    </div>
+                    <h1 class="text-1m lg:text-3xl col-span-2 lg:col-span-1">Todo comenzó con un mensaje tranqui, por privado obviamente porque no quería pasar ningún bañazo</h1>
+                    <h1 class="text-1m lg:text-3xl col-span-2 lg:col-span-1">Y mira que tan lejos ha llegado... definitivamente existe el efecto mariposa</h1>
+                    <div class="flex items-center justify-center w-full col-span-2 lg:col-span-1">
+                        <img src="segunda.JPG" class="w-96 h-auto rounded-md shadow-2xl"/>
+                    </div>
+                </div>
+            </section>
+    </main>
 </body>
 </html>
