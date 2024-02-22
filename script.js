@@ -25,3 +25,40 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(image);
     });
 });
+
+
+botonSi = document.getElementById('si')
+botonNo = document.getElementById('no')
+
+botonSi.addEventListener("click", () => {
+    document.getElementById("titulo").innerHTML = "SABÍA QUE IBAS A ACEPTAR. AHORA TE DEDICO ESTA CANCIÓN";
+    document.getElementById("subtitulo1").style.display = "none";
+    document.getElementById("subtitulo2").innerHTML = "3 ...";
+    botonSi.style.display = "none";
+    botonNo.style.display = "none";
+
+    setTimeout(function() {
+        document.getElementById("subtitulo2").innerHTML = "2 ...";
+    }, 1000);
+
+    setTimeout(function() {
+        document.getElementById("subtitulo2").innerHTML = "1 ...";
+    }, 2000);
+
+    setTimeout(function() {
+        // Redirige al video después de la cuenta regresiva
+        window.location.replace("https://www.youtube.com/watch?v=D_0FKJqxldE");
+    }, 3000);
+})
+
+botonNo.addEventListener("click", (event) => {
+    botonNo.style.display = 'none';
+});
+
+botonNo.addEventListener("mouseover", (event) => {
+    botonNo.style.display = 'none';
+});
+botonNo.addEventListener("mouseout", (event) => {
+    botonNo.style.display = 'block';
+});
+

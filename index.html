@@ -34,10 +34,28 @@
         opacity: 1; /* Cambiado a 1 cuando tiene la clase fade-in */
     }
 
+    .dialog {
+        padding: 0.5rem;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        background: white;
+        border-radius: 0.25rem;
+        z-index: 10;
+
+    }
+
+    section {
+        z-index: 9;
+    }
+
   </style>
 </head>
 <body>
     <main class="snap-y snap-mandatory relative w-full h-screen overflow-auto">
+        <dialog data-modal id="dialog" class="dialog backdrop:bg-black">
+            <button data-close-modal id="cerrar">cerrar</button>
+        </dialog>
             <section class="h-screen w-screen text-center relative overflow-hidden snap-start">
                 <div class="z-30 relative flex flex-col h-full">
                     <header>
@@ -110,12 +128,43 @@
                     <div class="lg:col-span-1 row-span-1 lg:h-screen">
                         <img src="legos.JPG" alt="Legos" class="h-full w-full object-cover">
                     </div>
-                    <div class="lg:col-span-1 row-span-1 mx-2 my-auto lg:flex lg:justify-center">
-                        <h1 class="text-2xl lg:flex-auto6">Siempre habran detalles que nos uniran porque estamos hechos el uno para el otro</h1>
+                    <div class="lg:col-span-1 h-full row-span-1 mx-2 lg:my-64 lg:mx-20 my-auto  items-center lg:justify-center">
+                        <h1 class="text-xl lg:text-2xl font-bold lg:mb-64 mt-8">Siempre habran detalles que nos uniran porque estamos hechos el uno para el otro</h1>
+                        <h1 class="text-xl lg:text-2xl lg:mx-12 lg:mt-40 mt-2">Por eso he preparado una sorpresa para ti</h1>
+                        <h2 class="text-xl lg:text-2xl font-bold text-black lg:mt-52 mt-14">
+                            Sigue bajando...
+                        </h2>     
                     </div>
                     <div class="lg:col-span-1 row-span-1 lg:h-screen">
                         <img src="jpyalice.JPG" alt="JP y Alice" class="h-full w-full object-cover">
                     </div>
+                </div>
+            </section>
+            <section class="h-screen w-screen text-center relative overflow-hidden snap-start bg-black">
+                <div class="z-30 relative flex flex-col h-full">
+                    <header>
+                        <h1 id="titulo" class="text-5xl mx-12 lg:text-9xl font-bold mb-4 lg:mx-20 text-white pt-40">
+                            QUISIERAS SER LA FRUTIREINA DE MI CORAZON
+                        </h1>
+                        <h1 id="subtitulo1" class="lg:text-9l text-white">(NOVIA / ENAMORADA / GÜILA)</h1>
+                        <h2 id="subtitulo2" class="text-6xl lg:text-8xl mt-2 text-white pt-5">
+                            👸🫅
+                        </h2>
+                    </header>
+
+                    <footer class="pb-24 flex flex-col flex-grow justify-end items-center">
+                        <div class="items-center flex">
+                            <button id="si" style="background-color: indianred;" class="border border-transparent rounded-lg lg:mt-6 
+                                text-white p-4 hover:bg-transparent hover:border-white px-8 mx-8">SI !!</button>
+                            <button id="no" style="background-color: indianred;" class="border border-transparent rounded-lg lg:mt-6 
+                                text-white p-4 hover:bg-transparent hover:border-white px-8 mx-8">NO :(</button>
+                        </div>
+                        
+                    </footer>
+                    
+                </div>
+                <div class="absolute top-0 left-0 right-0 bottom-0 h-full z-10 bg-black bg-opacity-[50]">
+                    <img class="w-full h-full object-cover opacity-50" src="frutas.jpg" />
                 </div>
             </section>
     </main>
